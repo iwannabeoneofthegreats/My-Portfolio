@@ -1,0 +1,982 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "neue";
+  src: url(./NeueHaasDisplayRoman.ttf);
+}
+@font-face {
+  font-family: "mini";
+  src: url(./MinionPro-It.otf);
+}
+body {
+  overflow-x: hidden;
+}
+body .redefined {
+  height: 2000px;
+  background-image: url("https://static.wixstatic.com/media/c837a6_08de3b0f5bac46a1b597832271ba7ba6~mv2.png/v1/crop/x_0,y_122,w_2400,h_1344/fill/w_1900,h_1018,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/weavy-Magnific%20Precision%20Upscale%20V2-2025-12-21%20at%2011_11_02.png");
+  background-repeat: no-repeat;
+  background-size: 1940px 1080px;
+}
+body .redefined header {
+  padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+}
+body .redefined header .navbar {
+  display: none;
+}
+body .redefined header .navbar .burger {
+  display: none;
+}
+body .redefined header .overlay {
+  display: none;
+}
+body .redefined header .overlay.open {
+  display: block;
+}
+body .redefined header .nav-panel {
+  display: none;
+}
+body .redefined header .nav-panel.open {
+  display: block;
+}
+body .redefined header nav {
+  display: flex;
+  align-items: center;
+}
+body .redefined header nav a img {
+  width: 90px;
+  height: 44px;
+  cursor: pointer;
+  margin-left: 0px;
+}
+body .redefined header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 6px;
+  margin-left: 30px;
+  margin-top: 10px;
+}
+body .redefined header nav ul li a {
+  text-decoration: none;
+  color: rgb(88, 5, 5);
+  font-size: 24px;
+  font-family: "neue";
+  padding: 16px;
+}
+body .redefined header nav ul li a:hover {
+  text-decoration: underline;
+}
+body .redefined header .cart-log .cart {
+  color: rgb(88, 5, 5);
+  font-size: 26px;
+  font-family: "neue";
+  text-decoration: none;
+}
+body .redefined header .cart-log .log-in {
+  color: rgb(88, 5, 5);
+  font-size: 20px;
+  font-family: "neue";
+  text-decoration: none;
+  padding-left: 30px;
+}
+body .redefined header .cart-log .log-in:hover {
+  color: rgb(146, 94, 94);
+}
+body .redefined header .cart-log .log-in .fa-circle-user {
+  font-size: 26px;
+  color: #4D3F2B;
+  padding-right: 40px;
+}
+body .redefined .style {
+  color: white;
+  font-size: 24px;
+  margin-left: 200px;
+  margin-top: 650px;
+  display: flex;
+  justify-content: space-between;
+}
+body .redefined .style h2 {
+  font-family: "mini";
+  font-weight: 300;
+  font-size: 46px;
+  animation: appear 1s 1;
+}
+body .redefined .style p {
+  font-family: "neue";
+  animation: appear 1s 1;
+}
+body .redefined .style button {
+  padding: 10px 0;
+  font-size: 22px;
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  outline: none;
+  font-family: "neue";
+  cursor: pointer;
+}
+body .redefined .style button a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 35px;
+}
+body .redefined .style button a:hover {
+  text-decoration: underline;
+}
+body .redefined .style .hero {
+  display: flex;
+  background-color: #E7E0D7;
+  margin-right: 30px;
+  padding: 16px;
+  animation: scale 1.5s 1;
+}
+body .redefined .style .hero .sale {
+  display: flex;
+  flex-direction: column;
+  color: rgb(88, 5, 5);
+  padding-top: 170px;
+  padding-left: 16px;
+}
+body .redefined .style .hero .sale h2 {
+  font-size: 30px;
+  color: rgb(73, 4, 4);
+}
+body .redefined .style .hero .sale div {
+  display: flex;
+  flex-direction: row;
+  color: rgb(88, 5, 5);
+  gap: 50px;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+}
+body .redefined .style .hero .sale div a {
+  color: rgb(88, 5, 5);
+  font-family: "mini";
+}
+body main .Collections {
+  text-align: center;
+  color: #480000;
+  line-height: 1.5;
+  margin-top: 200px;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0 cover 60%;
+}
+body main .Collections h2 {
+  font-size: 30px;
+  font-family: "mini";
+  font-weight: 300;
+}
+body main .Collections p {
+  font-size: 22px;
+  font-family: "neue";
+}
+body main .shop {
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  animation: reveal linear;
+  animation-timeline: view();
+  animation-range: entry 0 cover 70%;
+}
+body main .shop div {
+  padding-top: 60px;
+}
+body main .shop div a {
+  color: #480000;
+  font-family: "mini";
+  font-size: 24px;
+  position: relative;
+  bottom: 770px;
+  left: 40px;
+}
+body main .farm {
+  background-image: url("https://static.wixstatic.com/media/c837a6_90b0e877d602493cb157c9898228c997~mv2.jpeg/v1/fill/w_1845,h_1072,fp_0.50_0.50,q_90,enc_auto/weavy-Gemini%203%20(Nano%20Banana%20Pro)-2025-12-10%20at%2011_26_59-topaz-upscale-1920w.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 1100px;
+  line-height: 2;
+  color: #480000;
+  padding: 0 40px;
+}
+body main .farm div {
+  background-color: #E7E0D7;
+  padding: 50px 10px;
+  width: 600px;
+  text-align: center;
+  position: relative;
+  top: 800px;
+}
+body main .farm div h2 {
+  font-family: "mini";
+  font-size: 32px;
+  font-weight: 300;
+}
+body main .farm div p {
+  font-family: "neue";
+  font-size: 22px;
+  line-height: 1.5;
+}
+body main .farm div a {
+  font-family: "mini";
+  font-size: 24px;
+  color: #480000;
+}
+body main .coveted {
+  padding-top: 200px;
+  padding-bottom: 0;
+}
+body main .coveted h2 {
+  text-align: center;
+  animation: reveal linear;
+  animation-timeline: view();
+  animation-range: entry 0 cover 70%;
+}
+body main .coveted .flex {
+  padding-top: 120px;
+  animation: reveal linear;
+  animation-timeline: view();
+  animation-range: entry 0 cover 60%;
+}
+body main .coveted .menswear {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding-left: 32px;
+}
+body main .coveted .menswear .trouser {
+  padding-bottom: 0;
+}
+body main .coveted .menswear .trouser div {
+  width: 450px;
+  padding: 10px 40px;
+  background-color: #E7E0D7;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  position: relative;
+  bottom: 250px;
+  left: 14px;
+  line-height: 3;
+}
+body main .coveted .menswear .trouser div h2 {
+  color: #480000;
+  font-family: "mini";
+  font-weight: 300;
+  text-align: left;
+  font-size: 26px;
+}
+body main .coveted .menswear .trouser div p {
+  font-family: "neue";
+  color: #480000;
+  font-size: 22px;
+  line-height: 1.4;
+}
+body main .coveted .menswear .trouser div a {
+  color: #480000;
+  font-size: 22px;
+  font-family: "mini";
+  font-weight: 300;
+}
+body main .coveted .womenswear {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding-left: 24px;
+}
+body main .coveted .womenswear .dress {
+  padding-bottom: 0;
+}
+body main .coveted .womenswear .dress div {
+  width: 450px;
+  padding: 10px 40px;
+  background-color: #E7E0D7;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  position: relative;
+  bottom: 250px;
+  left: 14px;
+  line-height: 3;
+}
+body main .coveted .womenswear .dress div h2 {
+  color: #480000;
+  font-family: "mini";
+  font-weight: 300;
+  text-align: left;
+  font-size: 26px;
+}
+body main .coveted .womenswear .dress div p {
+  font-family: "neue";
+  color: #480000;
+  font-size: 22px;
+  line-height: 1.4;
+}
+body main .coveted .womenswear .dress div a {
+  color: #480000;
+  font-size: 22px;
+  font-family: "mini";
+  font-weight: 300;
+}
+body .shopthelook {
+  display: flex;
+  flex-direction: row;
+}
+body .shopthelook div {
+  padding-left: 24px;
+  animation: reveal linear;
+  animation-timeline: view();
+  animation-range: entry 0 cover 20%;
+}
+body .shopthelook div h2 {
+  position: relative;
+  bottom: 3350px;
+  color: rgb(255, 255, 255);
+  left: 100px;
+  font-weight: 500;
+  font-family: "mini";
+  font-size: 48px;
+}
+body .shopthelook .grid {
+  display: flex;
+  flex-direction: column;
+  column-gap: 420px;
+}
+body .shopthelook .grid img:hover {
+  transition: 1s;
+  scale: 1.1;
+  cursor: pointer;
+}
+body .shopthelook .grid .trousersimg, body .shopthelook .grid .babytee, body .shopthelook .grid .coat, body .shopthelook .grid .socks {
+  width: 620px;
+  height: 654px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+body .shopthelook .grid .trousersimg {
+  animation: reveal linear;
+  animation-timeline: view();
+  animation-range: entry 0 cover 50%;
+}
+body .shopthelook .grid .trousersimg p, body .shopthelook .grid .trousersimg h2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: #480000;
+  position: relative;
+  left: 0px;
+  bottom: 0px;
+  font-size: 18px;
+}
+body .shopthelook .grid .trousersimg div {
+  display: flex;
+  flex-direction: row;
+  gap: 250px;
+  align-items: center;
+}
+body .shopthelook .grid .babytee {
+  animation: reveal linear;
+  animation-timeline: view();
+  animation-range: entry 0 cover 80%;
+}
+body .shopthelook .grid .babytee img {
+  padding-top: 200px;
+}
+body .shopthelook .grid .babytee p, body .shopthelook .grid .babytee h2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: #480000;
+  position: relative;
+  left: 0px;
+  bottom: 100px;
+  font-size: 18px;
+  margin-top: 40px;
+}
+body .shopthelook .grid .babytee div {
+  display: flex;
+  flex-direction: row;
+  gap: 300px;
+  align-items: center;
+}
+body .shopthelook .grid .coat {
+  animation: reveal linear;
+  animation-timeline: view();
+  animation-range: entry 0 cover 70%;
+}
+body .shopthelook .grid .coat img {
+  padding-top: 400px;
+  width: 600px;
+  height: 1200px;
+}
+body .shopthelook .grid .coat p, body .shopthelook .grid .coat h2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: #480000;
+  position: relative;
+  left: 0px;
+  top: 20px;
+  font-size: 18px;
+  margin-top: 20;
+}
+body .shopthelook .grid .coat div {
+  display: flex;
+  flex-direction: row;
+  gap: 300px;
+  align-items: center;
+}
+body .shopthelook .grid .socks {
+  animation: reveal linear;
+  animation-timeline: view();
+  animation-range: entry 0 cover 80%;
+}
+body .shopthelook .grid .socks img {
+  padding-top: 700px;
+  height: 1500px;
+}
+body .shopthelook .grid .socks p, body .shopthelook .grid .socks h2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: #480000;
+  position: relative;
+  left: 0px;
+  bottom: 50px;
+  font-size: 18px;
+  margin-top: 20;
+}
+body .shopthelook .grid .socks div {
+  display: flex;
+  flex-direction: row;
+  gap: 300px;
+  align-items: center;
+}
+body .story {
+  background-image: url("https://static.wixstatic.com/media/c837a6_89033fddc79446ec83a861a4f38a99f7~mv2.jpeg/v1/crop/x_0,y_0,w_1716,h_1288/fill/w_1711,h_1288,al_c,q_90,enc_avif,quality_auto/c837a6_89033fddc79446ec83a861a4f38a99f7~mv2.jpeg");
+  background-repeat: no-repeat;
+  height: 1600px;
+  width: 1905px;
+  background-size: cover;
+  animation: reveal linear;
+  animation-timeline: view();
+  animation-range: entry 0 cover 40%;
+}
+body .story p, body .story h2 {
+  color: #480000;
+  line-height: 1.5;
+  position: relative;
+  top: 180px;
+  left: 160px;
+  width: 600px;
+}
+body .story p {
+  font-family: "neue";
+  font-size: 24px;
+}
+body .story h2 {
+  font-family: "mini";
+  font-size: 36px;
+  font-weight: 300;
+}
+body footer {
+  height: 1000px;
+}
+body footer .footerimg {
+  width: 700px;
+  height: 350px;
+  position: relative;
+  top: 200px;
+  left: 1130px;
+}
+body footer .responsiveimg {
+  display: none;
+}
+body footer table {
+  text-align: left;
+  padding-left: 40px;
+  padding-top: 60px;
+  font-size: 20px;
+}
+body footer table .secondrow {
+  padding-left: 300px;
+}
+body footer table .thirdrow {
+  padding-left: 200px;
+}
+body footer table .fourthrow {
+  padding-left: 200px;
+}
+body footer table thead tr th {
+  color: rgb(88, 5, 5);
+  font-family: "mini";
+  font-size: 34px;
+  font-weight: 300;
+  padding-bottom: 30px;
+}
+body footer table tbody tr .email::after {
+  content: "*";
+  color: #480000;
+  margin-left: 6px;
+}
+body footer table tbody tr td {
+  padding-top: 20px;
+  font-family: "neue";
+  color: #480000;
+}
+body footer table tbody tr td button {
+  padding: 12px 46px;
+  border-radius: 0%;
+  border: 1px solid #480000;
+  outline: none;
+  color: #480000;
+  font-size: 14px;
+  cursor: pointer;
+}
+body footer table tbody tr td .ema {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  border-bottom: 1px solid #480000;
+  padding-bottom: 12px;
+  width: 530px;
+}
+body footer table tbody tr td .ema ::placeholder {
+  color: #480000;
+  padding-left: 20px;
+}
+body footer table tbody tr td .checkbox {
+  border: none;
+  border-radius: 0%;
+  margin-right: 10px;
+}
+body footer table tbody tr td a {
+  color: #480000;
+  text-decoration: none;
+}
+body footer table tbody tr td a br {
+  display: none;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: 0.9;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes scale {
+  from {
+    opacity: 0;
+    transform: scaleY(0);
+  }
+  to {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+@media (max-width: 768px) {
+  body {
+    display: flex;
+    background-color: #EBE3D8;
+    overflow-x: scroll;
+  }
+  body main {
+    background-color: white;
+  }
+  body main .shop {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 600px;
+  }
+  body main .shop .shopmen {
+    order: 1;
+    animation: reveal linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
+  }
+  body main .shop .shopmen a {
+    position: relative;
+    left: -330px;
+    bottom: 50px;
+    color: white;
+    font-weight: 300;
+  }
+  body main .shop .shopacc {
+    order: 2;
+    animation: reveal linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 70%;
+  }
+  body main .shop .shopacc a {
+    position: relative;
+    left: -380px;
+    bottom: 50px;
+    color: #480000;
+    font-weight: 300;
+  }
+  body main .shop .shopwomen {
+    order: 3;
+    animation: reveal linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 70%;
+  }
+  body main .shop .shopwomen a {
+    position: relative;
+    left: -360px;
+    bottom: 50px;
+    color: white;
+    font-weight: 300;
+  }
+  body main .farm div {
+    margin-left: 600px;
+    margin-bottom: 50px;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 60%;
+  }
+  body main .coveted .menswear {
+    display: flex;
+    flex-direction: column;
+  }
+  body main .coveted .menswear .trouser div {
+    margin-left: 190px;
+  }
+  body main .coveted .womenswear {
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 60%;
+  }
+  body main .coveted .womenswear .dress {
+    display: flex;
+    flex-direction: column;
+    order: 2;
+  }
+  body main .coveted .womenswear .dress div {
+    margin-left: 190px;
+  }
+  body main .shopthelook {
+    display: flex;
+    flex-direction: column;
+    margin-left: 590px;
+    justify-content: center;
+  }
+  body main .shopthelook .look img {
+    width: 650px;
+    height: 1700px;
+  }
+  body main .shopthelook .look h2 {
+    position: relative;
+    bottom: 1670px;
+    left: 50px;
+  }
+  body main .shopthelook .grid .trousersimg {
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 30%;
+  }
+  body main .shopthelook .grid .babytee {
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 70%;
+  }
+  body main .shopthelook .grid .coat {
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 70%;
+  }
+  body main .shopthelook .grid .socks {
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 70%;
+  }
+  body main .story {
+    margin-top: 900px;
+    background-size: 900px;
+    background-position: 450px;
+  }
+  body main .story p, body main .story h2 {
+    margin-left: 500px;
+    text-align: center;
+    opacity: 1;
+  }
+  body main .story h2 {
+    margin-bottom: 16px;
+  }
+  body footer {
+    background-color: white;
+  }
+  body footer table thead {
+    width: 300px;
+  }
+  body footer table thead tr .firstrow {
+    display: flex;
+    position: relative;
+    bottom: 400px;
+    left: 640px;
+    font-size: 20px;
+  }
+  body footer table thead .thirdrow {
+    position: relative;
+    right: 300px;
+    top: 100px;
+  }
+  body footer table thead .fourthrow {
+    position: relative;
+    right: 420px;
+    top: 100px;
+  }
+  body footer table thead .secondrow {
+    position: relative;
+    right: 230px;
+    top: 100px;
+  }
+  body footer table tbody {
+    background-color: white;
+    width: 300px;
+    color: black;
+  }
+  body footer table tbody .secondrow {
+    position: relative;
+    right: 230px;
+    top: 100px;
+  }
+  body footer table tbody .thirdrow {
+    position: relative;
+    right: 300px;
+    top: 100px;
+  }
+  body footer table tbody .thirdrow br {
+    display: flex;
+  }
+  body footer table tbody .fourthrow {
+    position: relative;
+    right: 420px;
+    top: 120px;
+  }
+  body footer table tbody .fourthrow br {
+    display: flex;
+  }
+  body footer table tbody .firstrow {
+    position: relative;
+    bottom: 430px;
+    left: 640px;
+  }
+  body footer table tbody tr .email {
+    position: relative;
+    bottom: 430px;
+    left: 640px;
+  }
+  body footer table tbody tr td {
+    margin: 0;
+    padding-top: 20px;
+  }
+  body footer table tbody tr td button {
+    padding: 14px 236px;
+    cursor: pointer;
+  }
+  body footer table tbody tr .firstrow {
+    position: relative;
+    bottom: 430px;
+    left: 640px;
+  }
+  body footer table tbody tr .firstrow .email::before {
+    content: "*";
+    color: #480000;
+  }
+  body footer .responsiveimg {
+    position: relative;
+    opacity: 1;
+    right: 120px;
+    width: 700px;
+    height: 350px;
+    display: inline;
+    top: 150px;
+  }
+  body footer .footerimg {
+    opacity: 0;
+  }
+  body .redefined {
+    background-position: 0px 320px;
+  }
+  body .redefined .style {
+    display: flex;
+    flex-direction: column;
+  }
+  body .redefined .style .hero {
+    text-align: center;
+    width: 620px;
+    position: relative;
+    top: 80px;
+    left: 410px;
+  }
+  body .redefined .style .hero h2 {
+    position: relative;
+    bottom: 174px;
+  }
+  body .redefined .style .Uncomplicated {
+    flex-direction: column;
+    text-align: center;
+    color: #480000;
+    position: relative;
+    right: 100px;
+    bottom: 600px;
+  }
+  body .redefined .style .Uncomplicated button {
+    border: 2px solid #480000;
+  }
+  body .redefined .style .Uncomplicated button a {
+    color: #480000;
+  }
+  body .redefined .orders {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: 150px;
+  }
+  body .redefined .orders header nav a img {
+    margin-right: 75px;
+  }
+  body .redefined .orders header nav .veulix {
+    order: 2;
+  }
+  body .redefined .orders header nav ul li {
+    display: none;
+  }
+  body .redefined .orders header .cart-log .log-in {
+    display: none;
+  }
+  body .redefined .orders header .cart-log .cart {
+    order: 1;
+    position: relative;
+    right: 350px;
+    font-size: 20px;
+  }
+  body .redefined .orders header .navbar {
+    display: flex;
+  }
+  body .redefined .orders header .navbar .burger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+  }
+  body .redefined .orders header .navbar .burger span {
+    display: block;
+    width: 22px;
+    height: 1.5px;
+    background: rgb(88, 5, 5);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease, width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-origin: center;
+  }
+  body .redefined .orders header .navbar .burger.open span:nth-child(1) {
+    transform: translateY(6.5px) rotate(45deg);
+  }
+  body .redefined .orders header .navbar .burger.open span:nth-child(2) {
+    opacity: 0;
+    width: 0;
+  }
+  body .redefined .orders header .navbar .burger.open span:nth-child(3) {
+    transform: translateY(-6.5px) rotate(-45deg);
+  }
+  body .redefined .orders header .overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.25);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+    z-index: 20;
+  }
+  body .redefined .orders header .overlay.open {
+    opacity: 1;
+    pointer-events: all;
+  }
+  body .redefined .orders header .nav-panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 240px;
+    background: white;
+    border-left: 1px solid white;
+    transform: translateX(100%);
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 30;
+    padding-top: 56px;
+  }
+  body .redefined .orders header .nav-panel.open {
+    transform: translateX(0);
+  }
+  body .redefined .orders header .nav-panel.open .nav-link:nth-child(1) {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 0.1s;
+  }
+  body .redefined .orders header .nav-panel.open .nav-link:nth-child(2) {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 0.15s;
+  }
+  body .redefined .orders header .nav-panel.open .nav-link:nth-child(3) {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 0.2s;
+  }
+  body .redefined .orders header .nav-panel.open .nav-link:nth-child(4) {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 0.25s;
+  }
+  body .redefined .orders header .nav-panel.open .nav-link:nth-child(5) {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 0.3s;
+  }
+  body .redefined .orders header .nav-link {
+    display: block;
+    padding: 14px 24px;
+    font-size: 15px;
+    color: #480000;
+    text-decoration: none;
+    opacity: 0;
+    transform: translateX(20px);
+    transition: opacity 0.2s ease, transform 0.1s cubic-bezier(0.2, 0, 0.2, 1), background 0.2s ease;
+  }
+  body .redefined .orders header .nav-link:hover {
+    background: rgb(88, 5, 5);
+    color: white;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

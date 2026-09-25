@@ -1,0 +1,494 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "neue";
+  src: url(./NeueHaasDisplayRoman.ttf);
+}
+@font-face {
+  font-family: "mini";
+  src: url(./MinionPro-It.otf);
+}
+body {
+  overflow-x: hidden;
+  animation: reveal 1.5s 1;
+}
+body .redefined header {
+  padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+}
+body .redefined header .navbar {
+  display: none;
+}
+body .redefined header .navbar .burger {
+  display: none;
+}
+body .redefined header .overlay {
+  display: none;
+}
+body .redefined header .overlay.open {
+  display: block;
+}
+body .redefined header .nav-panel {
+  display: none;
+}
+body .redefined header .nav-panel.open {
+  display: block;
+}
+body .redefined header .veuliximg {
+  display: flex;
+  align-items: center;
+}
+body .redefined header .veuliximg a img {
+  width: 90px;
+  height: 46px;
+  cursor: pointer;
+}
+body .redefined header .veuliximg ul {
+  list-style: none;
+  display: flex;
+  gap: 6px;
+  margin-left: 30px;
+  margin-top: 10px;
+}
+body .redefined header .veuliximg ul li .menproducts {
+  text-decoration: underline;
+}
+body .redefined header .veuliximg ul li a {
+  text-decoration: none;
+  color: rgb(88, 5, 5);
+  font-size: 21px;
+  font-family: "neue";
+  padding: 16px;
+}
+body .redefined header .veuliximg ul li a:hover {
+  text-decoration: underline;
+}
+body .redefined header .cart-log .cart {
+  color: rgb(88, 5, 5);
+  font-size: 18px;
+  font-family: "neue";
+  text-decoration: none;
+}
+body .redefined header .cart-log .log-in {
+  color: rgb(88, 5, 5);
+  font-size: 20px;
+  font-family: "neue";
+  text-decoration: none;
+  padding-left: 30px;
+}
+body .redefined header .cart-log .log-in:hover {
+  color: rgb(146, 94, 94);
+}
+body .redefined header .cart-log .log-in .fa-circle-user {
+  font-size: 26px;
+  color: #4D3F2B;
+  padding-right: 40px;
+}
+body main .paragraph {
+  display: flex;
+}
+body main .paragraph .contactimg {
+  margin-top: 60px;
+}
+body main .paragraph h1, body main .paragraph p {
+  color: rgb(88, 5, 5);
+}
+body main .paragraph h1 {
+  font-family: "mini";
+  font-weight: 300;
+  font-size: 44px;
+}
+body main .paragraph p {
+  font-family: "neue";
+  font-size: 22px;
+  line-height: 1.5;
+}
+body main .paragraph .contactpar {
+  margin-left: 80px;
+  margin-top: 120px;
+}
+body main .paragraph .contactpar form {
+  margin-top: 80px;
+}
+body main .paragraph .contactpar form h2 {
+  margin-top: 40px;
+  font-family: "mini";
+  font-size: 18px;
+  color: #480000;
+  font-weight: 300;
+}
+body main .paragraph .contactpar form h2::after {
+  content: "*";
+  color: #480000;
+  margin-left: 6px;
+}
+body main .paragraph .contactpar form input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  border-bottom: 1px solid #480000;
+  width: 660px;
+  margin-top: 20px;
+  padding-bottom: 14px;
+}
+body main .paragraph .contactpar form button {
+  border-radius: 0;
+  border: 1px solid #480000;
+  outline: none;
+  padding: 12px 90px;
+  font-size: 14px;
+  font-family: "neue";
+  color: #480000;
+  margin-top: 24px;
+  cursor: pointer;
+  transition: 0.4s ease;
+  position: relative;
+  top: 90px;
+  right: 665px;
+}
+body main .paragraph .contactpar form button:hover {
+  background-color: #480000;
+  color: white;
+}
+body footer {
+  height: 0px;
+}
+body footer .footerimg {
+  width: 700px;
+  height: 350px;
+  position: relative;
+  top: 200px;
+  left: 1130px;
+}
+body footer .responsiveimg {
+  display: none;
+}
+body footer table {
+  text-align: left;
+  padding-left: 40px;
+  padding-top: 200px;
+  font-size: 20px;
+}
+body footer table .secondrow {
+  padding-left: 300px;
+}
+body footer table .thirdrow {
+  padding-left: 200px;
+}
+body footer table .fourthrow {
+  padding-left: 200px;
+}
+body footer table thead tr th {
+  color: rgb(88, 5, 5);
+  font-family: "mini";
+  font-size: 34px;
+  font-weight: 300;
+  padding-bottom: 30px;
+}
+body footer table tbody tr .email::after {
+  content: "*";
+  color: #480000;
+  margin-left: 6px;
+}
+body footer table tbody tr td {
+  padding-top: 16px;
+  font-family: "neue";
+  color: #480000;
+}
+body footer table tbody tr td br {
+  display: none;
+}
+body footer table tbody tr td button {
+  padding: 12px 46px;
+  border-radius: 0%;
+  border: 1px solid #480000;
+  outline: none;
+  color: #480000;
+  font-size: 14px;
+}
+body footer table tbody tr td .ema {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  border-bottom: 1px solid #480000;
+  padding-bottom: 12px;
+  width: 530px;
+}
+body footer table tbody tr td .ema ::placeholder {
+  color: #480000;
+  padding-left: 20px;
+}
+body footer table tbody tr td .checkbox {
+  border: none;
+  border-radius: 0%;
+  margin-right: 10px;
+}
+body footer table tbody tr td a {
+  color: #480000;
+  text-decoration: none;
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@media (max-width: 768px) {
+  body {
+    overflow: auto;
+  }
+  body .redefined header {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  body .redefined header .veuliximg img {
+    margin-left: 250px;
+  }
+  body .redefined header .veuliximg .veulix {
+    order: 2;
+  }
+  body .redefined header .veuliximg ul li {
+    display: none;
+  }
+  body .redefined header .cart-log .log-in {
+    display: none;
+  }
+  body .redefined header .cart-log .cart {
+    order: 1;
+    position: relative;
+    right: 360px;
+    font-size: 20px;
+  }
+  body .redefined header .navbar {
+    display: flex;
+    margin-right: 40px;
+  }
+  body .redefined header .navbar .burger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+  }
+  body .redefined header .navbar .burger span {
+    display: block;
+    width: 22px;
+    height: 1.5px;
+    background: rgb(88, 5, 5);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease, width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-origin: center;
+  }
+  body .redefined header .navbar .burger.open span:nth-child(1) {
+    transform: translateY(6.5px) rotate(45deg);
+  }
+  body .redefined header .navbar .burger.open span:nth-child(2) {
+    opacity: 0;
+    width: 0;
+  }
+  body .redefined header .navbar .burger.open span:nth-child(3) {
+    transform: translateY(-6.5px) rotate(-45deg);
+  }
+  body .redefined header .overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.25);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+    z-index: 20;
+  }
+  body .redefined header .overlay.open {
+    opacity: 1;
+    pointer-events: all;
+  }
+  body .redefined header .nav-panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 240px;
+    background: white;
+    border-left: 1px solid white;
+    transform: translateX(100%);
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 30;
+    padding-top: 56px;
+  }
+  body .redefined header .nav-panel.open {
+    transform: translateX(0);
+  }
+  body .redefined header .nav-panel.open .nav-link:nth-child(1) {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 0.1s;
+  }
+  body .redefined header .nav-panel.open .nav-link:nth-child(2) {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 0.15s;
+  }
+  body .redefined header .nav-panel.open .nav-link:nth-child(3) {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 0.2s;
+  }
+  body .redefined header .nav-panel.open .nav-link:nth-child(4) {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 0.25s;
+  }
+  body .redefined header .nav-panel.open .nav-link:nth-child(5) {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 0.3s;
+  }
+  body .redefined header .nav-link {
+    display: block;
+    padding: 14px 24px;
+    font-size: 15px;
+    color: #480000;
+    text-decoration: none;
+    opacity: 0;
+    transform: translateX(20px);
+    transition: opacity 0.2s ease, transform 0.1s cubic-bezier(0.2, 0, 0.2, 1), background 0.2s ease;
+  }
+  body .redefined header .nav-link:hover {
+    background: rgb(88, 5, 5);
+    color: white;
+  }
+  main .paragraph {
+    display: flex;
+    flex-direction: column;
+  }
+  main .paragraph .contactpar h1, main .paragraph .contactpar p {
+    text-align: center;
+    margin-right: 60px;
+  }
+  main .paragraph .contactpar form {
+    margin-top: 120px;
+  }
+  main .paragraph .contactpar form input {
+    width: 40px;
+    flex-wrap: wrap;
+  }
+  main .paragraph .contactpar form button {
+    position: relative;
+    right: 0;
+    left: -2px;
+    bottom: 20px;
+    padding: 12px 280px;
+  }
+  main .paragraph .contactimg {
+    position: relative;
+    right: 60px;
+    top: 60px;
+  }
+  footer {
+    background-color: white;
+    position: relative;
+    right: 570px;
+    top: 300px;
+  }
+  footer table thead {
+    width: 290px;
+  }
+  footer table thead tr .firstrow {
+    display: flex;
+    position: relative;
+    bottom: 400px;
+    left: 640px;
+    font-size: 20px;
+  }
+  footer table thead .thirdrow {
+    position: relative;
+    right: 280px;
+    top: 100px;
+  }
+  footer table thead .fourthrow {
+    position: relative;
+    right: 350px;
+    top: 100px;
+  }
+  footer table thead .secondrow {
+    position: relative;
+    right: 180px;
+    top: 100px;
+  }
+  footer table tbody {
+    background-color: white;
+    width: 300px;
+    color: black;
+  }
+  footer table tbody .secondrow {
+    position: relative;
+    right: 180px;
+    top: 90px;
+  }
+  footer table tbody .thirdrow {
+    position: relative;
+    right: 280px;
+    top: 100px;
+  }
+  footer table tbody .fourthrow {
+    position: relative;
+    right: 350px;
+    top: 100px;
+  }
+  footer table tbody .firstrow {
+    position: relative;
+    bottom: 430px;
+    left: 640px;
+  }
+  footer table tbody tr .email {
+    position: relative;
+    bottom: 430px;
+    left: 640px;
+  }
+  footer table tbody tr td {
+    margin: 0;
+    padding-top: 20px;
+  }
+  footer table tbody tr td br {
+    display: inline;
+  }
+  footer table tbody tr td button {
+    padding: 14px 236px;
+  }
+  footer table tbody tr .firstrow {
+    position: relative;
+    bottom: 430px;
+    left: 640px;
+  }
+  footer table tbody tr .firstrow .email::before {
+    content: "*";
+    color: #480000;
+  }
+  footer .responsiveimg {
+    position: relative;
+    opacity: 1;
+    width: 700px;
+    height: 350px;
+    display: inline;
+    bottom: 40px;
+    left: 584px;
+  }
+  footer .footerimg {
+    opacity: 0;
+  }
+}
+
+/*# sourceMappingURL=contactus.css.map */

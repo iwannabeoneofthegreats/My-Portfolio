@@ -1,0 +1,1049 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "fut";
+  src: url(./FuturaLT.ttf);
+}
+@font-face {
+  font-family: "sack";
+  src: url(./Sackers\ Gothic\ Light.otf);
+}
+body {
+  overflow-x: hidden;
+}
+body header #menu-toggle {
+  display: none;
+}
+body header .burger-btn {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  gap: 5px;
+  position: relative;
+  z-index: 20;
+  border-radius: 8px;
+  border: none;
+  transition: background 0.2s, border-color 0.2s;
+}
+body header .burger-btn:hover {
+  background: #f5f5f5;
+}
+body header .burger-btn span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: currentColor;
+  border-radius: 2px;
+  transform-origin: center;
+  transition: transform 0.35s cubic-bezier(0.77, 0, 0.175, 1), opacity 0.2s, width 0.35s cubic-bezier(0.77, 0, 0.175, 1);
+}
+body header .burger-btn span:nth-child(2) {
+  width: 16px;
+  margin-left: -6px;
+}
+body header #menu-toggle:checked ~ .burger-btn span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+  width: 22px;
+}
+body header #menu-toggle:checked ~ .burger-btn span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+body header #menu-toggle:checked ~ .burger-btn span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+  width: 22px;
+}
+body header .nav-panel {
+  position: absolute;
+  top: 56px;
+  left: 0;
+  width: 240px;
+  background: #F5F87E;
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  transform: translateY(-8px);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.35s cubic-bezier(0.77, 0, 0.175, 1), opacity 0.25s ease;
+  z-index: 15;
+}
+body header .nav-panel nav {
+  display: flex;
+  flex-direction: column;
+}
+body header #menu-toggle:checked ~ .nav-panel {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: all;
+}
+body header .overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 5;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+body header #menu-toggle:checked ~ .overlay {
+  opacity: 1;
+  pointer-events: all;
+}
+body header {
+  padding: 4px 20px;
+  background-color: #F5F87E;
+}
+body header img {
+  width: 100%;
+  border-bottom: 1px solid black;
+}
+body header nav {
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+}
+body header nav ul {
+  display: flex;
+  gap: 20px;
+}
+body header nav ul li {
+  list-style: none;
+}
+body header nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-family: "fut";
+  font-size: 23px;
+  font-weight: 300;
+}
+body header nav ul li a:hover {
+  text-decoration: underline;
+}
+body header div {
+  padding-right: 40px;
+}
+body header div a {
+  text-decoration: none;
+  color: black;
+  font-family: "fut";
+  font-size: 23px;
+}
+body header div a:hover {
+  color: rgb(109, 109, 109);
+}
+body header div a .fa-circle-user {
+  padding-right: 10px;
+  font-size: 24px;
+}
+body main {
+  padding: 12px 0px;
+}
+body main .exploreclasses {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  row-gap: 12px;
+  padding: 0 12px;
+  padding-top: 200px;
+}
+body main .exploreclasses .grid1 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  row-gap: 40px;
+  column-gap: 50px;
+  padding-top: 10px;
+}
+body main .exploreclasses .grid1 img {
+  width: 110%;
+  height: 110%;
+}
+body main .exploreclasses .grid2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  row-gap: 40px;
+  column-gap: 50px;
+  padding-top: 10px;
+  padding-right: 30px;
+}
+body main .exploreclasses .grid2 img {
+  width: 110%;
+  height: 110%;
+}
+body main .exploreclasses .stir {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "fut";
+  font-size: 24px;
+}
+body main .exploreclasses .stir h2 {
+  font-weight: 300;
+}
+body main .exploreclasses .stir button {
+  background-color: black;
+  color: white;
+  font-family: "fut";
+  outline: none;
+  border: none;
+  border-radius: 30px;
+  padding: 7px 26px;
+  font-size: 22px;
+}
+body main .exploreclasses .stir button:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+body main .cooking {
+  background-image: url("./untitled_Magnific Upscale_2026-03-25_15-53-52(2).avif");
+  background-repeat: no-repeat;
+  background-size: 1910px;
+  background-position: 0 14px;
+  height: 1260px;
+  padding-top: 22px;
+  padding-left: 0;
+  padding-right: 0;
+}
+body main .cooking h1 {
+  font-family: "sack";
+  font-size: 126px;
+  text-align: center;
+  padding-top: 420px;
+  line-height: 1;
+  padding-bottom: 6px;
+}
+body main .cooking .flex {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid black;
+  padding: 34px 20px 0 20px;
+}
+body main .cooking .flex div p {
+  font-family: "fut";
+  font-size: 36px;
+  line-height: 1.2;
+  border-bottom: 1px solid black;
+  padding-bottom: 34px;
+  width: 900px;
+}
+body main .cooking .flex div button {
+  background-color: black;
+  color: white;
+  font-family: "fut";
+  outline: none;
+  border: none;
+  border-radius: 30px;
+  padding: 7px 30px;
+  font-size: 22px;
+  font-weight: 300;
+  margin-top: 26px;
+}
+body main .cooking .flex div button:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+body main .secret {
+  background-color: #90DFFF;
+  padding: 0px !important;
+}
+body main .secret h1 {
+  font-size: 126px;
+  font-family: "sack";
+  text-align: center;
+  padding-top: 290px;
+  line-height: 1.1;
+  padding-bottom: 10px;
+}
+body main .secret .grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+body main .secret .grid .grid1 {
+  display: grid;
+}
+body main .secret .grid .grid2 {
+  display: grid;
+}
+body main .secret .grid div {
+  padding: 40px 16px;
+  border: 1px solid black;
+  border-bottom: 2px solid black;
+}
+body main .secret .grid div h2 {
+  font-family: "fut";
+  font-size: 36px;
+  font-weight: 300;
+}
+body main .secret .grid div h2, body main .secret .grid div p {
+  padding-left: 12px;
+}
+body main .secret .grid div p {
+  font-family: "fut";
+  font-size: 22px;
+}
+body main .tasteof {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid black;
+}
+body main .tasteof div img {
+  width: 100%;
+  border: 1px solid black;
+  border-top: none;
+  min-height: 1190px;
+  object-fit: cover;
+  height: 100%;
+}
+body main .tasteof .classes {
+  background-color: #EF8354;
+  border: 1px solid black;
+  border-top: none;
+}
+body main .tasteof .classes h1 {
+  font-family: "sack";
+  font-size: 56px;
+  padding-left: 32px;
+  padding-top: 26px;
+  line-height: 1.1;
+}
+body main .tasteof .classes p {
+  font-family: "fut";
+  font-size: 22px;
+  padding-left: 32px;
+  padding-top: 26px;
+  line-height: 1.2;
+}
+body main .tasteof .classes form {
+  padding-top: 124px;
+}
+body main .tasteof .classes form div {
+  font-family: "fut";
+  padding-left: 0px;
+  line-height: 0.9;
+  width: 890px;
+  padding-bottom: 0;
+  padding-top: 80px;
+  animation: slide linear;
+  animation-timeline: view();
+  animation-range: entry 0 cover 55%;
+}
+body main .tasteof .classes form div h2 {
+  font-size: 38px;
+  font-weight: 200;
+  padding-left: 30px;
+}
+body main .tasteof .classes form div p {
+  font-size: 22px;
+  text-decoration: underline;
+  text-underline-offset: 40px;
+}
+body main .tasteof .classes form button {
+  background-color: black;
+  color: white;
+  font-family: "fut";
+  outline: none;
+  border: none;
+  border-radius: 30px;
+  padding: 7px 30px;
+  font-size: 22px;
+  font-weight: 300;
+  margin-top: 60px;
+  margin-left: 26px;
+}
+body main .tasteof .classes form button:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+body main .straightfrom {
+  background-color: #F5F87E;
+}
+body main .straightfrom h1 {
+  font-size: 122px;
+  font-family: "sack";
+  text-align: center;
+  padding-top: 40px;
+  line-height: 1.1;
+  display: block;
+  padding-bottom: 250px;
+}
+body main .straightfrom .cards {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 200px;
+}
+body main .straightfrom .cards .cards2 {
+  animation: rot2 linear;
+  animation-timeline: view();
+  animation-range: entry 0 cover 99%;
+  padding-bottom: 100px;
+  z-index: 9999;
+}
+body main .straightfrom .cards div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "fut";
+  font-size: 22px;
+  line-height: 1.5;
+  text-align: center;
+  animation: rot linear;
+  animation-timeline: view();
+  animation-range: entry 0 cover 95%;
+  padding-bottom: 100px;
+}
+body main .straightfrom .cards div div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  gap: 6px;
+  border-bottom: 1px solid black;
+  padding-bottom: 30px;
+  width: 580px;
+  justify-content: center;
+  padding-top: 0;
+  animation: none;
+}
+body footer {
+  padding-top: 30px;
+}
+body footer div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+body footer div img {
+  width: 30%;
+}
+body footer div nav {
+  padding: 60px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body footer div nav ul {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 20px;
+}
+body footer div nav ul li {
+  list-style: none;
+}
+body footer div nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-family: "sack";
+  font-size: 52px;
+  font-weight: 600;
+  line-height: 0.7;
+}
+body footer div nav ul li a:hover {
+  text-decoration: underline;
+}
+body footer .terryprivacy {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 36px;
+}
+body footer .terryprivacy p {
+  font-family: "fut";
+  font-size: 22px;
+}
+body footer .terryprivacy nav ul {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+body footer .terryprivacy nav ul li {
+  list-style: none;
+}
+body footer .terryprivacy nav ul li a {
+  font-family: "fut";
+  color: black;
+  text-decoration: none;
+  text-align: right;
+  font-size: 22px;
+  line-height: 0.4 !important;
+  font-weight: 300;
+  padding: 0px;
+}
+body footer .terryprivacy nav ul li a:hover {
+  text-decoration: none;
+}
+body footer .links {
+  font-family: "fut";
+  font-size: 22px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 36px;
+  text-align: center;
+}
+body footer .links nav {
+  padding-left: 100px;
+}
+body footer .links nav ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+body footer .links nav ul li {
+  list-style: none;
+}
+body footer .links nav ul li a {
+  font-family: "fut";
+  color: black;
+  text-decoration: none;
+  text-align: center;
+  font-size: 22px;
+  line-height: 0.4 !important;
+  font-weight: 300;
+  padding: 0px;
+}
+body footer .links nav ul li a:hover {
+  text-decoration: none;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(-500px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+@keyframes rot {
+  from {
+    rotate: -40deg;
+  }
+  to {
+    rotate: 20deg;
+  }
+}
+@keyframes rot2 {
+  from {
+    rotate: 40deg;
+  }
+  to {
+    rotate: -20deg;
+  }
+}
+@media (max-width: 1024px) {
+  body header {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    align-items: center;
+  }
+  body header img {
+    width: 50%;
+    height: 50%;
+    border-bottom: none;
+  }
+  body header nav {
+    display: none;
+  }
+  body header nav .login {
+    display: inline;
+  }
+  body header .burger-menu .burger-btn {
+    display: flex;
+    gap: 5px;
+  }
+  body header .burger-menu .burger-btn span {
+    width: 36px;
+    height: 4px;
+  }
+  body header .burger-menu .nav-panel {
+    top: 130px;
+    width: 100%;
+    height: 100%;
+  }
+  body header .burger-menu .nav-panel .login {
+    padding-top: 20px;
+    padding-bottom: 50px;
+  }
+  body header .burger-menu .nav-panel .login:hover {
+    color: rgb(109, 109, 109);
+    text-decoration: none;
+  }
+  body header .burger-menu .nav-panel a {
+    padding-top: 15px;
+    padding-left: 36px;
+    font-size: 28px;
+  }
+  body header .burger-menu .nav-panel a:hover {
+    text-decoration: underline;
+    color: black;
+  }
+  body header .burger-menu .overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 5;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.25s;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  body main .exploreclasses {
+    display: flex;
+    flex-direction: column;
+  }
+  body main .exploreclasses .stir {
+    order: -1;
+    padding-top: 0px;
+    padding-bottom: 120px;
+    font-size: 24px;
+  }
+  body main .exploreclasses .stir button {
+    padding: 12px 100px;
+    font-size: 24px;
+  }
+  body main .exploreclasses .stir p {
+    width: 750px;
+    font-size: 28px;
+  }
+  body main .exploreclasses .stir p br {
+    display: none;
+  }
+  body main .exploreclasses .grid1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 16px;
+    column-gap: 16px;
+    padding-top: 20px;
+  }
+  body main .exploreclasses .grid1 img {
+    width: 100%;
+    height: 100%;
+  }
+  body main .exploreclasses .grid2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 12px;
+    column-gap: 16px;
+    padding-top: 10px;
+    padding-right: 0;
+  }
+  body main .exploreclasses .grid2 img {
+    width: 100%;
+    height: 100%;
+  }
+  body main .cooking {
+    background-size: 2600px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding-top: 120px;
+    padding-bottom: 200px;
+  }
+  body main .cooking h1 {
+    padding-top: 0px;
+    font-size: 60px !important;
+    width: 650px !important;
+    padding-bottom: 120px;
+  }
+  body main .cooking .flex {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  body main .cooking .flex p {
+    font-size: 34px !important;
+    padding: 40px 0;
+    width: 630px !important;
+    padding-bottom: 70px !important;
+  }
+  body main .cooking .flex p br {
+    display: none;
+  }
+  body main .cooking .flex img {
+    order: 3;
+    width: 90%;
+    height: 80%;
+  }
+  body main .cooking .flex button {
+    order: 4;
+    position: relative;
+    top: 750px;
+  }
+  body main .cooking h1 {
+    width: 1200px;
+    font-size: 70px;
+    text-align: center;
+    justify-content: center;
+  }
+  body main .cooking h1 br {
+    display: none;
+  }
+  body main .secret {
+    display: flex;
+    flex-direction: column;
+  }
+  body main .secret h1 {
+    font-size: 80px;
+  }
+  body main .secret div {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  body main .mainimg {
+    display: block;
+  }
+  body main .tasteof {
+    display: flex;
+    flex-direction: column;
+  }
+  body main .tasteof div img {
+    width: 100%;
+    display: block;
+  }
+  body main .tasteof .classes {
+    padding-bottom: 30px;
+  }
+  body main .tasteof .classes button {
+    padding-top: 30px;
+  }
+  body main .straightfrom h1 {
+    font-size: 60px;
+  }
+  body footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding: 0;
+    font-size: 26px;
+    padding-bottom: 80px;
+  }
+  body footer .terryprivacy {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px;
+  }
+  body footer .terryprivacy p {
+    font-size: 26px;
+  }
+  body footer .terryprivacy nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  body footer .terryprivacy nav ul li {
+    text-align: center;
+    list-style: none;
+  }
+  body footer .terryprivacy nav ul li a {
+    text-align: center !important;
+    padding: 0;
+    font-size: 26px;
+  }
+  body footer .links {
+    display: flex;
+    flex-direction: column;
+    font-size: 26px;
+  }
+  body footer .links nav {
+    padding: 60px 0;
+  }
+  body footer .links nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  body footer .links nav ul li a {
+    text-align: center;
+    font-size: 26px;
+  }
+  .nav-panel {
+    width: 100%;
+    border-radius: 0;
+    left: 0;
+    right: 0;
+  }
+}
+@media (max-width: 768px) {
+  .nav-panel {
+    width: 100%;
+    border-radius: 0;
+    left: 0;
+    right: 0;
+  }
+  body header {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    align-items: center;
+  }
+  body header img {
+    width: 50%;
+    height: 50%;
+    border-bottom: none;
+  }
+  body header nav {
+    display: none;
+  }
+  body header nav .login {
+    display: inline;
+  }
+  body header .burger-menu .burger-btn {
+    display: flex;
+    gap: 5px;
+  }
+  body header .burger-menu .burger-btn span {
+    width: 36px;
+    height: 4px;
+  }
+  body header .burger-menu .nav-panel {
+    top: 130px;
+    width: 100%;
+    height: 100%;
+  }
+  body header .burger-menu .nav-panel .login {
+    padding-top: 20px;
+    padding-bottom: 50px;
+  }
+  body header .burger-menu .nav-panel .login:hover {
+    color: rgb(109, 109, 109);
+    text-decoration: none;
+  }
+  body header .burger-menu .nav-panel a {
+    padding-top: 15px;
+    padding-left: 36px;
+    font-size: 28px;
+  }
+  body header .burger-menu .nav-panel a:hover {
+    text-decoration: underline;
+    color: black;
+  }
+  body header .burger-menu .overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 5;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.25s;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  body main .exploreclasses {
+    display: flex;
+    flex-direction: column;
+  }
+  body main .exploreclasses .stir {
+    order: -1;
+    padding-top: 0px;
+    padding-bottom: 120px;
+    font-size: 24px;
+  }
+  body main .exploreclasses .stir button {
+    padding: 12px 100px;
+    font-size: 24px;
+  }
+  body main .exploreclasses .stir p {
+    width: 750px;
+    font-size: 28px;
+  }
+  body main .exploreclasses .stir p br {
+    display: none;
+  }
+  body main .exploreclasses .grid1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 16px;
+    column-gap: 16px;
+    padding-top: 20px;
+  }
+  body main .exploreclasses .grid1 img {
+    width: 100%;
+    height: 100%;
+  }
+  body main .exploreclasses .grid2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 12px;
+    column-gap: 16px;
+    padding-top: 10px;
+  }
+  body main .exploreclasses .grid2 img {
+    width: 100%;
+    height: 100%;
+  }
+  body main .cooking {
+    background-size: 2600px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding-top: 120px;
+    padding-bottom: 200px;
+  }
+  body main .cooking h1 {
+    padding-top: 0px;
+    font-size: 60px !important;
+    width: 550px !important;
+    padding-bottom: 120px;
+  }
+  body main .cooking .flex {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  body main .cooking .flex p {
+    font-size: 16px;
+    padding: 30px 0;
+  }
+  body main .cooking .flex img {
+    order: 3;
+    width: 90%;
+    height: 80%;
+  }
+  body main .cooking .flex button {
+    order: 4;
+    position: relative;
+    top: 1000px;
+  }
+  body main .cooking h1 {
+    width: 1200px;
+    font-size: 70px;
+    text-align: center;
+    justify-content: center;
+  }
+  body main .cooking h1 br {
+    display: none;
+  }
+  body main .secret {
+    display: flex;
+    flex-direction: column;
+  }
+  body main .secret h1 {
+    font-size: 80px;
+    padding-bottom: 120px;
+  }
+  body main .secret .grid {
+    display: flex;
+    flex-direction: column;
+  }
+  body main .mainimg {
+    display: block;
+  }
+  body main .tasteof {
+    display: flex;
+    flex-direction: column;
+  }
+  body main .tasteof div img {
+    width: 100%;
+    display: block;
+  }
+  body main .tasteof .classes {
+    padding-bottom: 30px;
+  }
+  body main .tasteof .classes form div h2, body main .tasteof .classes form div p {
+    font-size: 26px;
+  }
+  body main .tasteof .classes form div p {
+    width: 700px;
+    text-decoration: none;
+    border-bottom: 2px solid black;
+    padding-bottom: 60px;
+  }
+  body main .tasteof .classes button {
+    padding-top: 30px;
+  }
+  body main .straightfrom h1 {
+    font-size: 40px;
+  }
+  body footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding: 0;
+    font-size: 26px;
+    padding-bottom: 80px;
+    padding-top: 20px;
+  }
+  body footer .terryprivacy {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px;
+  }
+  body footer .terryprivacy p {
+    font-size: 26px;
+  }
+  body footer .terryprivacy nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  body footer .terryprivacy nav ul li {
+    text-align: center;
+    list-style: none;
+  }
+  body footer .terryprivacy nav ul li a {
+    text-align: center !important;
+    padding: 0;
+    font-size: 26px;
+  }
+  body footer .links {
+    display: flex;
+    flex-direction: column;
+    font-size: 26px;
+  }
+  body footer .links nav {
+    padding: 60px 0;
+  }
+  body footer .links nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  body footer .links nav ul li a {
+    text-align: center;
+    font-size: 26px;
+  }
+}
+
+/*# sourceMappingURL=melange.css.map */

@@ -1,0 +1,671 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "neue";
+  src: url(./NeueHaasDisplayRoman.ttf);
+}
+@font-face {
+  font-family: "mini";
+  src: url(./MinionPro-It.otf);
+}
+body {
+  overflow-x: hidden;
+}
+body .redefined header {
+  padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+}
+body .redefined header .navbar {
+  display: none;
+}
+body .redefined header .navbar .burger {
+  display: none;
+}
+body .redefined header .overlay {
+  display: none;
+}
+body .redefined header .overlay.open {
+  display: block;
+}
+body .redefined header .nav-panel {
+  display: none;
+}
+body .redefined header .nav-panel.open {
+  display: block;
+}
+body .redefined header nav {
+  display: flex;
+  align-items: center;
+}
+body .redefined header nav a img {
+  width: 90px;
+  height: 46px;
+  cursor: pointer;
+}
+body .redefined header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 6px;
+  margin-left: 30px;
+  margin-top: 10px;
+}
+body .redefined header nav ul li a {
+  text-decoration: none;
+  color: rgb(88, 5, 5);
+  font-size: 21px;
+  font-family: "neue";
+  padding: 16px;
+}
+body .redefined header nav ul li a:hover {
+  text-decoration: underline;
+}
+body .redefined header .cart-log .cart {
+  color: rgb(88, 5, 5);
+  font-size: 18px;
+  font-family: "neue";
+  text-decoration: none;
+}
+body .redefined header .cart-log .log-in {
+  color: rgb(88, 5, 5);
+  font-size: 20px;
+  font-family: "neue";
+  text-decoration: none;
+  padding-left: 30px;
+}
+body .redefined header .cart-log .log-in:hover {
+  color: rgb(146, 94, 94);
+}
+body .redefined header .cart-log .log-in .fa-circle-user {
+  font-size: 26px;
+  color: #4D3F2B;
+  padding-right: 40px;
+}
+body main .browseproducts .head {
+  margin-left: 30px;
+  margin-top: 100px;
+}
+body main .browseproducts .head h2 {
+  font-family: "mini";
+  color: #480000;
+  font-weight: 300;
+  font-size: 30px;
+}
+body main .browseproducts .head p {
+  font-size: 16px;
+  font-family: "neue";
+  font-weight: 300;
+  color: #480000;
+  line-height: 1.4;
+}
+body main .browseproducts .browseby {
+  margin-left: 30px;
+  margin-top: 60px;
+  width: 200px;
+}
+body main .browseproducts .browseby p {
+  border-bottom: 1px solid #D2C3BF;
+  width: 200px;
+  padding-bottom: 16px;
+  font-family: "mini";
+  font-weight: 100;
+  color: #480000;
+  font-size: 18px;
+}
+body main .browseproducts .browseby nav ul {
+  list-style: none;
+}
+body main .browseproducts .browseby nav ul li {
+  display: flex;
+  flex-direction: column;
+}
+body main .browseproducts .browseby nav ul li a {
+  color: #480000;
+  text-decoration: none;
+  margin-top: 12px;
+  font-family: "neue";
+  font-size: 15px;
+}
+body main .browseproducts .browseby nav ul li a:hover {
+  text-decoration: underline;
+}
+body main .browseproducts .sortby {
+  display: flex;
+  gap: 1350px;
+  position: relative;
+  left: 270px;
+  bottom: 210px;
+}
+body main .browseproducts .sortby p {
+  font-family: "neue";
+  font-size: 15px;
+}
+body main .browseproducts .sortby .form-select {
+  border: none;
+  outline: none;
+  color: #480000;
+  font-family: "neue";
+  font-size: 14px;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+body main .browseproducts .sortby .form-select:hover {
+  color: #926262;
+}
+body main .browseproducts .sortby .form-select option {
+  background-color: #e9d9d9;
+  color: #480000;
+}
+body main .browseproducts .products {
+  display: grid;
+  grid-template-columns: repeat(2, 700px);
+  grid-template-rows: repeat(2, min-content);
+  row-gap: 0px;
+  column-gap: 120px;
+  margin-left: 270px;
+  position: relative;
+  bottom: 120px;
+}
+body main .browseproducts .products img {
+  cursor: pointer;
+}
+body main .browseproducts .products .blouse {
+  grid-template-columns: 1/2;
+  grid-template-rows: 1/2;
+  animation: appear 1s 1;
+}
+body main .browseproducts .products .Ribbed {
+  grid-template-columns: 1/2;
+  grid-template-rows: 2/2;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0 cover 70%;
+}
+body main .browseproducts .products .Handbag {
+  grid-template-columns: 2/2;
+  grid-template-rows: 1/2;
+  animation: appear 1s 1;
+}
+body main .browseproducts .products div img {
+  width: 781px;
+  height: 1028px;
+}
+body main .browseproducts .products div nav ul {
+  display: flex;
+  gap: 300px;
+  list-style: none;
+  align-items: center;
+  margin-top: 10px;
+}
+body main .browseproducts .products div nav ul li a {
+  text-decoration: none;
+  color: #480000;
+  font-family: "mini";
+  font-size: 18px;
+  font-weight: 300;
+  margin-left: 70px;
+}
+body footer {
+  height: 1000px;
+}
+body footer .footerimg {
+  width: 700px;
+  height: 350px;
+  position: relative;
+  top: 200px;
+  left: 1130px;
+}
+body footer .responsiveimg {
+  display: none;
+}
+body footer table {
+  text-align: left;
+  padding-left: 40px;
+  padding-top: 200px;
+  font-size: 20px;
+}
+body footer table .secondrow {
+  padding-left: 300px;
+}
+body footer table .thirdrow {
+  padding-left: 200px;
+}
+body footer table .fourthrow {
+  padding-left: 200px;
+}
+body footer table thead tr th {
+  color: rgb(88, 5, 5);
+  font-family: "mini";
+  font-size: 34px;
+  font-weight: 300;
+  padding-bottom: 30px;
+}
+body footer table tbody tr .email::after {
+  content: "*";
+  color: #480000;
+  margin-left: 6px;
+}
+body footer table tbody tr td {
+  padding-top: 16px;
+  font-family: "neue";
+  color: #480000;
+}
+body footer table tbody tr td button {
+  padding: 12px 46px;
+  border-radius: 0%;
+  border: 1px solid #480000;
+  outline: none;
+  color: #480000;
+  font-size: 14px;
+}
+body footer table tbody tr td .ema {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  border-bottom: 1px solid #480000;
+  padding-bottom: 12px;
+  width: 530px;
+}
+body footer table tbody tr td .ema ::placeholder {
+  color: #480000;
+  padding-left: 20px;
+}
+body footer table tbody tr td .checkbox {
+  border: none;
+  border-radius: 0%;
+  margin-right: 10px;
+}
+body footer table tbody tr td a {
+  color: #480000;
+  text-decoration: none;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: 0.9;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes opacity {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@media (max-width: 768px) {
+  body {
+    overflow: auto;
+  }
+  body .redefined header nav img {
+    margin-left: 260px;
+  }
+  body .redefined header nav .veulix {
+    order: 2;
+  }
+  body .redefined header nav ul li {
+    display: none;
+  }
+  body .redefined header .cart-log .log-in {
+    display: none;
+  }
+  body .redefined header .cart-log .cart {
+    order: 1;
+    position: relative;
+    right: 360px;
+    font-size: 20px;
+  }
+  body .redefined header .navbar {
+    display: flex;
+    margin-right: 30px;
+  }
+  body .redefined header .navbar .burger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+  }
+  body .redefined header .navbar .burger span {
+    display: block;
+    width: 22px;
+    height: 1.5px;
+    background: rgb(88, 5, 5);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease, width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-origin: center;
+  }
+  body .redefined header .navbar .burger.open span:nth-child(1) {
+    transform: translateY(6.5px) rotate(45deg);
+  }
+  body .redefined header .navbar .burger.open span:nth-child(2) {
+    opacity: 0;
+    width: 0;
+  }
+  body .redefined header .navbar .burger.open span:nth-child(3) {
+    transform: translateY(-6.5px) rotate(-45deg);
+  }
+  body .redefined header .overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.25);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+    z-index: 20;
+  }
+  body .redefined header .overlay.open {
+    opacity: 1;
+    pointer-events: all;
+  }
+  body .redefined header .nav-panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 240px;
+    background: white;
+    border-left: 1px solid white;
+    transform: translateX(100%);
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 30;
+    padding-top: 56px;
+  }
+  body .redefined header .nav-panel.open {
+    transform: translateX(0);
+  }
+  body .redefined header .nav-panel.open .nav-link:nth-child(1) {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 0.1s;
+  }
+  body .redefined header .nav-panel.open .nav-link:nth-child(2) {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 0.15s;
+  }
+  body .redefined header .nav-panel.open .nav-link:nth-child(3) {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 0.2s;
+  }
+  body .redefined header .nav-panel.open .nav-link:nth-child(4) {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 0.25s;
+  }
+  body .redefined header .nav-panel.open .nav-link:nth-child(5) {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 0.3s;
+  }
+  body .redefined header .nav-link {
+    display: block;
+    padding: 14px 24px;
+    font-size: 15px;
+    color: #480000;
+    text-decoration: none;
+    opacity: 0;
+    transform: translateX(20px);
+    transition: opacity 0.2s ease, transform 0.1s cubic-bezier(0.2, 0, 0.2, 1), background 0.2s ease;
+  }
+  body .redefined header .nav-link:hover {
+    background: rgb(88, 5, 5);
+    color: white;
+  }
+  body main .browseproducts .sortby {
+    display: flex;
+    gap: 40px;
+    position: relative;
+    left: 250px;
+    top: 60px;
+    background-color: transparent;
+  }
+  body main .browseproducts .sortby p {
+    font-family: "neue";
+    font-size: 15px;
+  }
+  body main .browseproducts .sortby .form-select {
+    border: none;
+    outline: none;
+    color: #480000;
+    font-family: "neue";
+    font-size: 14px;
+    cursor: pointer;
+    letter-spacing: 1px;
+  }
+  body main .browseproducts .sortby .form-select:hover {
+    color: #926262;
+  }
+  body main .browseproducts .sortby .form-select option {
+    background-color: #e9d9d9;
+    color: #480000;
+  }
+  body main .browseproducts .products {
+    display: grid;
+    position: relative;
+    margin-top: 120px;
+    row-gap: 100px;
+    margin-left: 0;
+    grid-template-areas: "blouse" "ribbed" "handbag";
+  }
+  body main .browseproducts .products .Straight {
+    grid-area: straight;
+  }
+  body main .browseproducts .products .Cotton {
+    grid-area: cotton;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 60%;
+  }
+  body main .browseproducts .products .Trench {
+    grid-area: trench;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 60%;
+  }
+  body main .browseproducts .products .Draped {
+    grid-area: draped;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 60%;
+  }
+  body main .browseproducts .products .Tailored {
+    grid-area: tailored;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 60%;
+  }
+  body main .browseproducts .products .blouse {
+    grid-area: blouse;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 60%;
+  }
+  body main .browseproducts .products .Ribbed {
+    grid-area: ribbed;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 70%;
+  }
+  body main .browseproducts .products .Handbag {
+    grid-area: handbag;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 60%;
+  }
+  body main .browseproducts .products .Turtleneck {
+    grid-area: turtleneck;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 60%;
+  }
+  body main .browseproducts .products .Knit {
+    grid-area: knit;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 60%;
+  }
+  body main .browseproducts .products .V-Neck {
+    grid-area: neck;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 60%;
+  }
+  body main .browseproducts .head {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  body main .browseproducts .head h2 {
+    font-size: 35px;
+  }
+  body main .browseproducts .head p {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 300px;
+  }
+  body main .browseproducts .head p br {
+    display: none;
+  }
+  body main .browseby {
+    display: none;
+  }
+  body main .sortby {
+    display: flex;
+    column-gap: 0px;
+    position: relative;
+    left: -70px;
+    bottom: -10px;
+  }
+  body main .sortby p {
+    font-family: "neue";
+    font-size: 15px;
+  }
+  body main .sortby .form-select {
+    border: none;
+    outline: none;
+    color: #480000;
+    font-family: "neue";
+    font-size: 14px;
+    cursor: pointer;
+    letter-spacing: 1px;
+  }
+  body main .sortby .form-select:hover {
+    color: #926262;
+  }
+  body main .sortby .form-select option {
+    background-color: #e9d9d9;
+    color: #480000;
+  }
+  body footer {
+    background-color: white;
+    position: relative;
+    right: 570px;
+    top: 400px;
+  }
+  body footer table thead {
+    width: 290px;
+  }
+  body footer table thead tr .firstrow {
+    display: flex;
+    position: relative;
+    bottom: 400px;
+    left: 640px;
+    font-size: 20px;
+  }
+  body footer table thead .thirdrow {
+    position: relative;
+    right: 280px;
+    top: 100px;
+  }
+  body footer table thead .fourthrow {
+    position: relative;
+    right: 350px;
+    top: 100px;
+  }
+  body footer table thead .secondrow {
+    position: relative;
+    right: 180px;
+    top: 100px;
+  }
+  body footer table tbody {
+    background-color: white;
+    width: 300px;
+    color: black;
+  }
+  body footer table tbody .secondrow {
+    position: relative;
+    right: 180px;
+    top: 90px;
+  }
+  body footer table tbody .thirdrow {
+    position: relative;
+    right: 280px;
+    top: 100px;
+  }
+  body footer table tbody .fourthrow {
+    position: relative;
+    right: 350px;
+    top: 100px;
+  }
+  body footer table tbody .firstrow {
+    position: relative;
+    bottom: 430px;
+    left: 640px;
+  }
+  body footer table tbody tr .email {
+    position: relative;
+    bottom: 430px;
+    left: 640px;
+  }
+  body footer table tbody tr td {
+    margin: 0;
+    padding-top: 20px;
+  }
+  body footer table tbody tr td button {
+    padding: 14px 236px;
+  }
+  body footer table tbody tr .firstrow {
+    position: relative;
+    bottom: 430px;
+    left: 640px;
+  }
+  body footer table tbody tr .firstrow .email::before {
+    content: "*";
+    color: #480000;
+  }
+  body footer .responsiveimg {
+    position: relative;
+    opacity: 1;
+    width: 700px;
+    height: 350px;
+    display: inline;
+    bottom: 40px;
+    left: 584px;
+  }
+  body footer .footerimg {
+    opacity: 0;
+  }
+}
+
+/*# sourceMappingURL=winter.css.map */
