@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <title>პროდუქტი</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%237c5cff'/><text x='50' y='73' font-size='66' font-family='Arial' font-weight='bold' fill='white' text-anchor='middle'>N</text></svg>">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<!-- // ფოფაფების დივები -->
+<div class="modal-overlay" id="authModal">
+  <div class="modal">
+    <button class="modal-close" id="modalClose">✕</button>
+
+    <div class="auth-tabs">
+      <button class="auth-tab active" data-tab="login">შესვლა</button>
+      <button class="auth-tab" data-tab="register">რეგისტრაცია</button>
+    </div>
+
+    <!-- ლოგინ ფორმა ოღონდ ფოფაპი -->
+    <form id="loginForm">
+      <input type="email" id="loginEmail" placeholder="ელ. ფოსტა" required />
+      <input type="password" id="loginPassword" placeholder="პაროლი" required />
+      <button type="submit" class="btn">შესვლა</button>    </form>
+
+    <!-- რეგისტრაციის ფორმა -->
+    <form id="registerForm" hidden>
+      <input type="text" id="regFirstName" placeholder="სახელი" required />
+      <input type="text" id="regLastName" placeholder="გვარი" required />
+      <input type="email" id="regEmail" placeholder="ელ. ფოსტა" required />
+      <input type="password" id="regPassword" placeholder="პაროლი (მინ. 8 სიმბოლო)" required />
+      <input type="number" id="regAge" placeholder="ასაკი" required />
+      <input type="text" id="regPhone" placeholder="ტელეფონი" value="+995" required />
+      <input type="text" id="regAddress" placeholder="მისამართი" required />
+      <input type="text" id="regZipcode" placeholder="ZIP კოდი (მაგ. 0100)" required />
+      <input type="url" id="regAvatar" placeholder="ავატარის სურათის ლინკი (URL)" />
+      <select id="regGender" required>
+        <option value="">აირჩიე სქესი</option>
+        <option value="MALE">მამრობითი</option>
+        <option value="FEMALE">მდედრობითი</option>
+        <option value="OTHER">სხვა</option>
+      </select>
+      <button type="submit" class="btn">რეგისტრაცია</button>
+    </form>
+  </div>
+</div>
+
+<body>
+
+  <header class="header">
+    <div class="container header-row">
+      <a style="font-family: 'ka';" href="index.html" class="logo">NOVA | ნოვა</a>
+
+      <nav class="nav">
+        <a href="#" class="nav-link active">მთავარი</a>
+        <a href="#" class="nav-link">ელექტრონიკა</a>
+        <a href="#" class="nav-link">ტანსაცმელი</a>
+      
+        <div class="more-dropdown">
+          <button class="more-toggle">
+            მეტი <i class="fa-solid fa-chevron-down arrow"></i>
+          </button>
+          <div class="dropdown-menu">
+            <a href="#">სილამაზე</a>
+            <a href="#">სახლი</a>
+            <a href="#">ფასდაკლებები</a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" id="searchInput" placeholder="ძებნა..." />
+        <div class="search-results" id="searchResults"></div>
+      </div>
+
+      <div class="header-actions">
+        <button class="btn btn-light" id="loginBtn">შესვლა</button>
+        <button class="btn" id="signupBtn">რეგისტრაცია</button>
+        <button class="btn btn-light" id="profileBtn" style="display:none;">👤 პროფილი</button>
+        <button class="cart-btn" id="cartBtn">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="cart-count">0</span>
+        </button>
+      </div>
+
+      <button class="menu-toggle" id="menuToggle">☰</button>
+    </div>
+  </header>
+
+  <main class="container" style="padding:40px 16px;">
+    <a href="index.html" class="btn btn-light">← უკან</a>
+
+    <div id="productDetail" style="margin-top:24px;">იტვირთება...</div>
+
+    <!-- შეფასებები -->
+    <section class="reviews">
+      <h2>შეფასებები</h2>
+
+      <form id="reviewForm" class="review-form">
+        <select id="reviewRating">
+          <option value="5">⭐⭐⭐⭐⭐ (5)</option>
+          <option value="4">⭐⭐⭐⭐ (4)</option>
+          <option value="3">⭐⭐⭐ (3)</option>
+          <option value="2">⭐⭐ (2)</option>
+          <option value="1">⭐ (1)</option>
+        </select>
+        <textarea id="reviewText" placeholder="დაწერე შენი შეფასება..." required></textarea>
+        <button type="submit" class="btn">შეფასების დამატება</button>
+      </form>
+
+      <div id="reviewsList"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+  <div class="container footer-content">
+    <div class="footer-col">
+      <h3>NOVA</h3>
+      <p>შენი სანდო ონლაინ მაღაზია — საუკეთესო ტექნიკა საუკეთესო ფასად.</p>
+    </div>
+    <div class="footer-col">
+      <h4>მენიუ</h4>
+      <a href="index.html">მთავარი</a>
+      <a href="#">პროდუქტები</a>
+      <a href="#">კატეგორიები</a>
+    </div>
+    <div class="footer-col">
+      <h4>დახმარება</h4>
+      <a href="#">მიწოდება</a>
+      <a href="#">დაბრუნება</a>
+      <a href="#">FAQ</a>
+    </div>
+    <div class="footer-col">
+      <h4>გამოგვყევი</h4>
+      <div class="socials">
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 NOVA Shop · ყველა უფლება დაცულია</div>
+</footer>
+
+  <div class="menu-backdrop" id="menuBackdrop"></div>
+
+
+  <script src="api.js"></script>
+  <script src="details.js"></script>
+</body>
+</html>
